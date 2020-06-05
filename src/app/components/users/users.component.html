@@ -1,0 +1,69 @@
+<button (click)="showUserForm = !showUserForm " class="btn btn-dark mb-3 ">
+    addUser </button>
+<div class="card card-body mb-3 " *ngIf="showUserForm">
+    <h2> Add User </h2>
+    <form #userForm="ngForm" (ngSubmit)="OnSubmit(userForm)">
+        <div class="form-group mb-3">
+            <label>First Name</label>
+            <input type="text" [(ngModel)]="user.firstName" [ngClass]="{ 'is-invalid':userFirstName.errors &&
+               userFirstName.touched   }" class="form-control" name="firstName" #userFirstName="ngModel" required
+                minlength="2">
+            <div [hidden]="!userFirstName.errors?.required" class="invalid-feedback">
+                First name arequired a sidiii
+            </div>
+            <div [hidden]="!userFirstName.errors?.minlength" class="invalid-feedback">
+                zouj kalmat lfo9
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Last Name</label>
+            <input type="text" [(ngModel)]="user.lastName" class="form-control" name="LastName">
+        </div>
+        <div class="form-group mb-3">
+            <label>email</label>
+            <input type="text" [(ngModel)]="user.email" [ngClass]="{ 'is-invalid':userEmails.errors &&
+              userEmails.touched   }" class="form-control" name="email" #userEmails="ngModel" required
+                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+            <div [hidden]="!userEmails.errors?.required" class="invalid-feedback">
+                email arequired a sidiii
+            </div>
+            <div [hidden]="!userEmails.errors?.pattern" class="invalid-feedback">
+                9olna email a tna7
+            </div>
+
+        </div>
+
+        <button [disabled]="!userForm.form.valid " class="btn btn-block mb-3"> Add new user </button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<ul class="list-unstyled">
+
+    <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-light]="user.isActive">
+
+
+
+        <h3>{{ user.firstName }} {{  user.lastName  }} <small *ngIf="user.age "><button (click)="user.hide = !user.hide"
+                    class="btn btn-dark btn-sm"> <i [ngClass]="user.hide ? 'fa fa-plus' : 'fa fa-minus' "> </i>
+                </button> </small> </h3>
+
+        <ul *ngIf="!user.hide ">
+
+            <li class="list-group-item">email: {{ user.email }} </li>
+            <li class="list-group-item">registered: {{ user.registered | date }} </li>
+
+
+        </ul>
+
+
+
+    </li>
+</ul>
