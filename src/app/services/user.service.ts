@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import { User } from "../models/User";
-
+import { EthcontractService } from '.././ethcontract.service';
 @Injectable()
 export class UserService {
 
@@ -13,10 +13,10 @@ export class UserService {
 
     this.users = [
       {
-        firstName: 'John',
-        lastName: 'Doe',
+        prenomPersonnel: 'John',
+        nomPersonnel: 'Doe',
         age: 30,
-        email: 'aaaa@yahoo.com ',
+        mailPersonnel: 'aaaa@yahoo.com ',
         //image:'http://lorempixel.com/600/600/people/3',
         isActive: true,
         registered: new Date('11/02/1998 10:30'),
@@ -26,10 +26,10 @@ export class UserService {
       },
 
       {
-        firstName: 'abdelillah',
-        lastName: 'Guermouche',
+        prenomPersonnel: 'abdelillah',
+        nomPersonnel: 'Guermouche',
         age: 22,
-        email: 'aaaazzzz@yahoo.com ',
+        mailPersonnel: 'aaaazzzz@yahoo.com ',
         //image:'http://lorempixel.com/600/600/people/2',
         isActive: false,
         registered: new Date('02/05/1998 10:30'),
@@ -38,10 +38,10 @@ export class UserService {
       },
 
       {
-        firstName: 'Eden',
-        lastName: 'Hazard',
+        prenomPersonnel: 'Eden',
+        nomPersonnel: 'Hazard',
         age: 11,
-        email: 'aaaarrrr@yahoo.com ',
+        mailPersonnel: 'aaaarrrr@yahoo.com ',
         //image:'https:/&psig=AOvVaw1NvdzwWomqkCRkub_yDKx&ust=1582126002532000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLChy_m02-cCFQAAAAAdAAAAABAD'
         registered: new Date('04/05/1998 10:30'),
         hide: true

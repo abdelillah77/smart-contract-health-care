@@ -1,10 +1,17 @@
 export interface User {
-    firstName: string,
-    lastName: string,
+    prenomPersonnel: string,
+    nomPersonnel: string,
     age?: number,
-    email?: string,
+    mailPersonnel?: string,
 
     isActive?: boolean,
     registered?: any,
     hide?: boolean
 }
+/*
+ uint256 idPersonnel;
+        string rolePersonnel;
+        string nomPersonnel;
+        string prenomPersonnel;
+        string mailPersonnel;
+        */

@@ -3,7 +3,7 @@ import { UserService } from '../../services/user.service';
 import { User } from '../../models/User'
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { ThrowStmt } from '@angular/compiler';
-
+import { EthcontractService } from '../../ethcontract.service';
 
 
 @Component({
@@ -13,10 +13,10 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class UsersComponent implements OnInit {
   user: User = {
-    firstName: '',
-    lastName: '',
+    prenomPersonnel: '',
+    nomPersonnel: '',
     age: null,
-    email: ''
+    mailPersonnel: ''
 
 
   };
@@ -30,7 +30,7 @@ export class UsersComponent implements OnInit {
   //@ViewChild("userForm") form: any ;
   data: any;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private ethcontractService: EthcontractService) { }
 
   ngOnInit() {
 

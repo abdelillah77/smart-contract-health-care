@@ -4,32 +4,33 @@
     <h2> Add User </h2>
     <form #userForm="ngForm" (ngSubmit)="OnSubmit(userForm)">
         <div class="form-group mb-3">
-            <label>First Name</label>
-            <input type="text" [(ngModel)]="user.firstName" [ngClass]="{ 'is-invalid':userFirstName.errors &&
-               userFirstName.touched   }" class="form-control" name="firstName" #userFirstName="ngModel" required
-                minlength="2">
-            <div [hidden]="!userFirstName.errors?.required" class="invalid-feedback">
+            <label>Prenom </label>
+            <input type="text" [(ngModel)]="user.prenomPersonnel" [ngClass]="{ 'is-invalid':userPrenomPersonnel.errors &&
+               userPrenomPersonnel.touched   }" class="form-control" name="prenomPersonnel"
+                #userPrenomPersonnel="ngModel" required minlength="2">
+            <div [hidden]="!userPrenomPersonnel.errors?.required" class="invalid-feedback">
                 First name arequired a sidiii
             </div>
-            <div [hidden]="!userFirstName.errors?.minlength" class="invalid-feedback">
+            <div [hidden]="!userPrenomPersonnel.errors?.minlength" class="invalid-feedback">
                 zouj kalmat lfo9
             </div>
         </div>
 
         <div class="form-group mb-3">
-            <label>Last Name</label>
-            <input type="text" [(ngModel)]="user.lastName" class="form-control" name="LastName">
+            <label>Nom</label>
+            <input type="text" [(ngModel)]="user.nomPersonnel" class="form-control" name="NomPersonnel">
         </div>
         <div class="form-group mb-3">
-            <label>email</label>
-            <input type="text" [(ngModel)]="user.email" [ngClass]="{ 'is-invalid':userEmails.errors &&
-              userEmails.touched   }" class="form-control" name="email" #userEmails="ngModel" required
+            <label>Email</label>
+            <input type="text" [(ngModel)]="user.mailPersonnel" [ngClass]="{ 'is-invalid':userMailPersonnel.errors &&
+              userMailPersonnel.touched   }" class="form-control" name="mailPersonnel" #userMailPersonnel="ngModel"
+                required
                 pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
-            <div [hidden]="!userEmails.errors?.required" class="invalid-feedback">
+            <div [hidden]="!userMailPersonnel.errors?.required" class="invalid-feedback">
                 email arequired a sidiii
             </div>
-            <div [hidden]="!userEmails.errors?.pattern" class="invalid-feedback">
-                9olna email a tna7
+            <div [hidden]="!userMailPersonnel.errors?.pattern" class="invalid-feedback">
+                9olna email a *****
             </div>
 
         </div>
@@ -51,13 +52,13 @@
 
 
 
-        <h3>{{ user.firstName }} {{  user.lastName  }} <small *ngIf="user.age "><button (click)="user.hide = !user.hide"
-                    class="btn btn-dark btn-sm"> <i [ngClass]="user.hide ? 'fa fa-plus' : 'fa fa-minus' "> </i>
-                </button> </small> </h3>
+        <h3>{{ user.prenomPersonnel }} {{  user.nomPersonnel  }} <button (click)="user.hide = !user.hide"
+                class="btn btn-dark btn-sm"> <i [ngClass]="user.hide ? 'fa fa-plus' : 'fa fa-minus' "> </i>
+            </button> </h3>
 
         <ul *ngIf="!user.hide ">
 
-            <li class="list-group-item">email: {{ user.email }} </li>
+            <li class="list-group-item">email: {{ user.mailPersonnel }} </li>
             <li class="list-group-item">registered: {{ user.registered | date }} </li>
 
 
