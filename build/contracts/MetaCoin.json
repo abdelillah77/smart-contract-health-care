@@ -2532,14 +2532,48 @@
         }
       },
       "links": {
-        "ConvertLib": "0x0bFe15994E3cBb792c03bbA19A072F03bf206cc9"
+        "ConvertLib": "0x30cd9D0Cd029d31f5aE493C52C567DE38522C60e"
       },
-      "address": "0x5D2ad1d35A8C725046B389d9ba7bFB8E269Fb624",
-      "transactionHash": "0x692754810a10fbd69bde3f18304006978d8e7a20a724d200a7d5a230286eabb5"
+      "address": "0x705bb6011a31CFCF1463555507C9fe680191E731",
+      "transactionHash": "0xb1ac66cebdfbc0349bb6137d4f61295e5775a7fa437efacea56e62cfad0655dc"
+    },
+    "1592085561599": {
+      "events": {
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        }
+      },
+      "links": {
+        "ConvertLib": "0xB2882CAE37F5963018fa05A31f58205198Fe7a7b"
+      },
+      "address": "0xAb8C4344970D4c65FC4509b8a1e7145DcF9C3FEd",
+      "transactionHash": "0xeff81a4baed4efe5370beeb2ed6976b89fc5981b4e8dd7b3ff1efef12f973c3a"
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-06-13T18:11:22.421Z",
+  "updatedAt": "2020-06-13T22:04:13.627Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

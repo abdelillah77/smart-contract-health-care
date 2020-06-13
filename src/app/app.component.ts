@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+//import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { EthcontractService } from './ethcontract.service';
+
+
+
 
 @Component({
   selector: 'app-root',
