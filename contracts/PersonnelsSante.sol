@@ -16,6 +16,15 @@ contract PersonnelsSante {
 
     uint256[] public listPersonnel;
 
+    uint256 public nombrePersonnels;
+
+    constructor () public{
+
+        setNewPersonnel("Medecin","DEGDEG","Hicham","hdegdeg24@gmail.com");
+        setNewPersonnel("Medecin","GUERMOUCHE","Abed el illah","GUERMOUCHE@gmail.com");
+    
+    }
+
     function setNewPersonnel(
         string memory rolePersonnel,
         string memory nomPersonnel,
@@ -24,6 +33,7 @@ contract PersonnelsSante {
     ) public {
         // PersonnelSante_Struct[msg.sender].address_sender = msg.sender;
         uint256 newidPersonnel = listPersonnel.length + 1;
+        nombrePersonnels = listPersonnel.length + 1;
 
         PersonnelSante_Struct[newidPersonnel].idPersonnel = newidPersonnel;
         PersonnelSante_Struct[newidPersonnel].rolePersonnel = rolePersonnel;
@@ -32,6 +42,10 @@ contract PersonnelsSante {
         PersonnelSante_Struct[newidPersonnel].mailPersonnel = mailPersonnel;
 
         listPersonnel.push(newidPersonnel);
+    }
+
+    function getNombrePersonnels() public view returns (uint256 ) {
+        return nombrePersonnels;
     }
 
     function getAllid() public view returns (uint256[] memory) {

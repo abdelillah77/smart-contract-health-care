@@ -28,15 +28,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Abdelillah/Desktop/Epfe1/Final/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Abdelillah/Desktop/Epfe1/Final/contracts/ConvertLib.sol\":{\"keccak256\":\"0x9f8249ffc0dee02477303cf8203490724bb1b4fa95529f57f045b050224f9f3f\",\"urls\":[\"bzz-raw://b722aa57de643288538efde477ecf5b5faae0eb9d736e588a8900dfce346347a\",\"dweb:/ipfs/QmVy4eGhyRNMebHKNVyKxZv9Ev3FmvxvaEa1c9jgDk6g5S\"]}},\"version\":1}",
-  "bytecode": "0x60c3610025600b82828239805160001a60731461001857fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea265627a7a72315820dba0c6db5113b2b2662f2fc6a0d8d26e218fa51155cebd5a9979983b375273da64736f6c63430005100032",
-  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea265627a7a72315820dba0c6db5113b2b2662f2fc6a0d8d26e218fa51155cebd5a9979983b375273da64736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/memoire1.1/smart-contract-health-care/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/root/memoire1.1/smart-contract-health-care/contracts/ConvertLib.sol\":{\"keccak256\":\"0x9f8249ffc0dee02477303cf8203490724bb1b4fa95529f57f045b050224f9f3f\",\"urls\":[\"bzz-raw://b722aa57de643288538efde477ecf5b5faae0eb9d736e588a8900dfce346347a\",\"dweb:/ipfs/QmVy4eGhyRNMebHKNVyKxZv9Ev3FmvxvaEa1c9jgDk6g5S\"]}},\"version\":1}",
+  "bytecode": "0x60c3610025600b82828239805160001a60731461001857fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea265627a7a723158205501a27375609408cf782da2b3ee0ae754344f417f0c0fd6e2590a7fefc1fa4664736f6c63430005100032",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea265627a7a723158205501a27375609408cf782da2b3ee0ae754344f417f0c0fd6e2590a7fefc1fa4664736f6c63430005100032",
   "sourceMap": "25:156:1:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "25:156:1:-;;;;;;;;;;;;;;;;;;;;;;;;47:132;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;47:132:1;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;118:20;161:14;152:6;:23;145:30;;47:132;;;;:::o",
   "source": "pragma solidity ^0.5.0;\n\nlibrary ConvertLib {\n\tfunction convert(uint amount,uint conversionRate) public pure returns (uint convertedAmount)\n\t{\n\t\treturn amount * conversionRate;\n\t}\n}\n",
-  "sourcePath": "C:\\Users\\Abdelillah\\Desktop\\Epfe1\\Final\\contracts\\ConvertLib.sol",
+  "sourcePath": "/root/memoire1.1/smart-contract-health-care/contracts/ConvertLib.sol",
   "ast": {
-    "absolutePath": "/C/Users/Abdelillah/Desktop/Epfe1/Final/contracts/ConvertLib.sol",
+    "absolutePath": "/root/memoire1.1/smart-contract-health-care/contracts/ConvertLib.sol",
     "exportedSymbols": {
       "ConvertLib": [
         151
@@ -241,7 +241,7 @@
     "src": "0:182:1"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/Abdelillah/Desktop/Epfe1/Final/contracts/ConvertLib.sol",
+    "absolutePath": "/root/memoire1.1/smart-contract-health-care/contracts/ConvertLib.sol",
     "exportedSymbols": {
       "ConvertLib": [
         151
@@ -453,12 +453,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xEb81211460De6996e602dfcFdFEe1E5762c99e7c",
-      "transactionHash": "0x21aaae7d907f4ab24e7669bb2eb168eee91607af7f8a83c915b8bcd4f83984b9"
+      "address": "0x0bFe15994E3cBb792c03bbA19A072F03bf206cc9",
+      "transactionHash": "0xdc8fd878819894cedf7e5c1626bbc66723b1d85f7594d0685c96b3093e2fabdd"
     }
   },
-  "schemaVersion": "3.2.0",
-  "updatedAt": "2020-06-09T15:26:56.983Z",
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-06-13T18:11:22.416Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
